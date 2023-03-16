@@ -1,4 +1,4 @@
-package com.example.shouldship;
+package com.example.shouldship.apiCalls;
 
 public class CarbonEstimation {
     private String id;
