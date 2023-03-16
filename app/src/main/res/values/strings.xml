@@ -102,4 +102,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_result">ResultActivity</string>
     <string name="title_activity_compare">CompareActivity</string>
+    <string name="HistoriqueBtnTxt">Historique</string>
+    <string name="txtBtnNouvelleEstimation">Nouvelle estimation</string>
 </resources>
