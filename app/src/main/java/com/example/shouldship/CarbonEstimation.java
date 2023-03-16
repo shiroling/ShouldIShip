@@ -9,7 +9,7 @@ public class CarbonEstimation {
     private DistanceUnit distanceUnit;
     private String estimationDate;
 
-   // private  "estimated_at": "2020-07-31T13:00:04.446Z",  je sais pas quoi mettre comme datatype
+    // private  "estimated_at": "2020-07-31T13:00:04.446Z",  je sais pas quoi mettre comme datatype
     private double carbonG;
     private double carbon_lb;
     private double carbon_kg;
@@ -21,6 +21,8 @@ public class CarbonEstimation {
         this.distance = distance;
         this.weightUnit = weightUnit;
         this.distanceUnit = distanceUnit;
+
+
 
         // Manque l'appel à l'api
 
