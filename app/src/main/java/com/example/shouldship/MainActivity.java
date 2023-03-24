@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToComparer(){
+    public void goToComparer(){ 
         Intent intent = new Intent(MainActivity.this, CompareActivity.class);
         startActivity(intent);
     }
