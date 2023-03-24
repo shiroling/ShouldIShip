@@ -4,8 +4,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.shouldship.R;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,10 +28,10 @@ public class CarbonEstimation {
     private WeightUnit weightUnit;
     private DistanceUnit distanceUnit;
     // private  "estimated_at": "2020-07-31T13:00:04.446Z",  je sais pas quoi mettre comme datatype
-    private Date estimationDate;
-    private double carbon_lb;
-    private double carbon_kg;
-    private double carbon_mt;
+    private String estimationDate;
+    private double carbonLb;
+    private double carbonKg;
+    private double carbonMt;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public CarbonEstimation requestEstimation(Transport transport, float weight, float distance, WeightUnit weightUnit, DistanceUnit distanceUnit)
@@ -86,9 +84,9 @@ public class CarbonEstimation {
         // Get the estimated carbon emissions value
 
         setEstimationDate(attributesJson.getString("estimated_at"));
-        setCarbon_lb(attributesJson.getDouble("carbon_lb"));
-        setCarbon_kg(attributesJson.getDouble("carbon_kg"));
-        setCarbon_mt(attributesJson.getDouble("carbon_mt"));
+        setCarbonLb(attributesJson.getDouble("carbon_lb"));
+        setCarbonKg(attributesJson.getDouble("carbon_kg"));
+        setCarbonMt(attributesJson.getDouble("carbon_mt"));
 
         return this;
     }
@@ -129,9 +127,9 @@ public class CarbonEstimation {
         ca.setDistance(attributesJson.getDouble("distance_value"));
         ca.setDistanceUnit(DistanceUnit.valueOf(attributesJson.getString("distance_unit")));
         ca.setEstimationDate(attributesJson.getString("estimated_at"));
-        ca.setCarbon_lb(attributesJson.getDouble("carbon_lb"));
-        ca.setCarbon_kg(attributesJson.getDouble("carbon_kg"));
-        ca.setCarbon_mt(attributesJson.getDouble("carbon_mt"));
+        ca.setCarbonLb(attributesJson.getDouble("carbon_lb"));
+        ca.setCarbonKg(attributesJson.getDouble("carbon_kg"));
+        ca.setCarbonMt(attributesJson.getDouble("carbon_mt"));
 
         return ca;
     }
@@ -183,36 +181,35 @@ public class CarbonEstimation {
     public void setDistanceUnit(DistanceUnit distanceUnit) {
         this.distanceUnit = distanceUnit;
     }
-    public Date getEstimationDate() {
+    public String getEstimationDate() {
         return estimationDate;
     }
 
     public void setEstimationDate(String estimationDate) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        this.estimationDate = format.parse(estimationDate);
+        this.estimationDate = estimationDate;
     }
 
-    public double getCarbon_lb() {
-        return carbon_lb;
+    public double getCarbonLb() {
+        return carbonLb;
     }
 
-    public void setCarbon_lb(double carbon_lb) {
-        this.carbon_lb = carbon_lb;
+    public void setCarbonLb(double carbonLb) {
+        this.carbonLb = carbonLb;
     }
 
-    public double getCarbon_kg() {
-        return carbon_kg;
+    public double getCarbonKg() {
+        return carbonKg;
     }
 
-    public void setCarbon_kg(double carbon_kg) {
-        this.carbon_kg = carbon_kg;
+    public void setCarbonKg(double carbonKg) {
+        this.carbonKg = carbonKg;
     }
 
-    public double getCarbon_mt() {
-        return carbon_mt;
+    public double getCarbonMt() {
+        return carbonMt;
     }
 
-    public void setCarbon_mt(double carbon_mt) {
-        this.carbon_mt = carbon_mt;
+    public void setCarbonMt(double carbonMt) {
+        this.carbonMt = carbonMt;
     }
 }

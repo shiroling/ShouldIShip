@@ -3,6 +3,7 @@ package com.example.shouldship;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,19 +26,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button boutonComparer = findViewById(R.id.BtnComparer);
-        boutonComparer.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                goToComparer();
-            }
-        });
+        boutonComparer.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        goToComparer();
+                    }
+                }
+        );
         Button boutonHistorique = findViewById(R.id.BtnHistorique);
-        boutonHistorique.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                goToHistorique();
-            }
-        });
+        boutonHistorique.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        goToHistorique();
+                    }
+                }
+        );
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
