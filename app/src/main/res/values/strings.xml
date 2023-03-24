@@ -20,4 +20,6 @@
     <string name="label_poids">Poids</string>
     <string name="label_transport">Transport</string>
     <string name="label_distance">Distance</string>
+
+    <string name="large_text"></string>
 </resources>
