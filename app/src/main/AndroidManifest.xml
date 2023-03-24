@@ -12,26 +12,6 @@
         android:theme="@style/Theme.ShouldShip"
         tools:targetApi="31">
         <activity
-            android:name=".CompareActivity"
-            android:exported="false"
-            android:label="@string/title_activity_compare"
-            android:theme="@style/Theme.ShouldShip.NoActionBar" />
-        <activity
-            android:name=".ResultActivity"
-            android:exported="false"
-            android:label="@string/title_activity_result"
-            android:theme="@style/Theme.ShouldShip.NoActionBar" />
-        <activity
-            android:name=".FormActivity"
-            android:exported="false"
-            android:label="@string/title_activity_form"
-            android:theme="@style/Theme.ShouldShip.NoActionBar" />
-        <activity
-            android:name=".HistoricActivity"
-            android:exported="false"
-            android:label="@string/title_activity_historic"
-            android:theme="@style/Theme.ShouldShip.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

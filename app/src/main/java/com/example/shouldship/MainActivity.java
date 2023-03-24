@@ -72,18 +72,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToEstimation(){
-        Intent intent =new Intent(MainActivity.this, FormActivity.class);
-        startActivity(intent);
+        //Intent intent =new Intent(MainActivity.this, FormActivity.class);
+        //startActivity(intent);
     }
 
     public void goToComparer(){
-        Intent intent =new Intent(MainActivity.this, CompareActivity.class);
-        startActivity(intent);
+        //Intent intent =new Intent(MainActivity.this, CompareActivity.class);
+        //startActivity(intent);
     }
 
     public void goToHistorique(){
-        Intent intent =new Intent(MainActivity.this, HistoricActivity.class);
-        startActivity(intent);
+        //Intent intent =new Intent(MainActivity.this, HistoricActivity.class);
+        //startActivity(intent);
     }
 
 }
